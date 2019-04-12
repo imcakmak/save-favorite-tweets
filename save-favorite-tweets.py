@@ -6,7 +6,7 @@ CONSUMER_KEY = ""
 CONSUMER_SECRET = ""
 ACCESS_KEY = ""  # aka access token
 ACCESS_SECRET = ""  # aka access token secret
-TWEETS_PER_REQUEST = "200"  # You don't need to modify this unless the maximum number of tweet retrieval per one request is changed
+TWEETS_PER_REQUEST = "200"  # You don't want to modify this unless the maximum number of tweet retrieval per request is changed by Twitter dev team
 
 consumer = oauth.Consumer(key=CONSUMER_KEY, secret=CONSUMER_SECRET)
 access_token = oauth.Token(key=ACCESS_KEY, secret=ACCESS_SECRET)
