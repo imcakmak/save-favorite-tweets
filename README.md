@@ -1,5 +1,5 @@
 # save-favorite-tweets
-This script lets you save the entire favorite tweet collection of any user you want into a .txt file called "output.txt". It doesn't save anything other than text part of the tweet (It saves links).
+This script lets you save the entire favorite tweet collection (texts & links) of any user you want into a .txt file called "output.txt".
 
 It is the easiest way I could find to save favorite tweets using Twitter API.
 
