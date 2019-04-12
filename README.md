@@ -9,13 +9,13 @@ It's coded in python version 3.x.
 It requires `oauth2`, you can install it via the PIP package.
 `$ pip install oauth2`
 
-You need to create an application on https://apps.twitter.com, this will give you the `Consumer Token`, and the `Consumer Secret`. After that you need to create an access token for that application on the same website, which will give you the `Access Token` and the `Access Secret`. Then you have to manually type these values into the code along with the Twitter profile you want to target. (It can be yourself or someone else)
+You need to create an application on https://apps.twitter.com, this will give you the `Consumer Token`, and the `Consumer Secret`. After that you need to create an access token for that application on the same website, which will give you the `Access Token` and the `Access Secret`. Then you have to manually type these values into indicated places of the .py file along with the Twitter handle you want to target.
 
 That's all.
 
 
-## Bugs
-It saves the last tweet of each 200-tweets-batch twice. The problem wasn't an issue for me so I didn't fix it. 
+## Known Bugs
+It saves the last tweet of each 200-tweet-batch twice.
 
 
 
