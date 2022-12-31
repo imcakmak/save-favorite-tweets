@@ -19,21 +19,23 @@ def fn_save(endpoint):
     response, data = client.request(endpoint)
     print("Access was successful.")
     tweets = json.loads(data)
-    print(str(len(tweets)) + " new tweets are retrieved")
-    print("Retrieved tweets are being saved..")
-    for tweet in tweets:
-        text_file.write(tweet['text'] + "\n")
-        print("|", end="")
-    print("")
-    print("Save was successful.")
     if len(tweets) > 1:
-        print("Trying to access " + str(len(tweets) - 1) + "th tweet's ID..")
-        max_id = tweets[len(tweets)-1]["id"]
+        lastitem = tweets.pop()
+        print(str(len(tweets)+1) + " new tweets are retrieved")
+        print("Retrieved tweets are being saved..")
+        for tweet in tweets:
+            text_file.write(tweet['text'] + "\n")
+            print("|", end="")
+        print("")
+        print("Save was successful.")
+        print("Trying to access " + str(len(tweets)+1) + "th tweet's ID..")
+        max_id = lastitem["id"]
         endpoint = "https://api.twitter.com/1.1/favorites/list.json?count=" + TWEETS_PER_REQUEST + "&screen_name=" + TWITTER_USERNAME + "&max_id=" + str(max_id)
         fn_save(endpoint)
     else:
+        text_file.write(tweets[0]['text'] + "\n")
         return
 
 fn_save(endpoint)
-print("All tweets are saved.")
+print("Done.")
 text_file.close()
