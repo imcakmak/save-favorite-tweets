@@ -12,18 +12,3 @@ It requires `oauth2`, you can install it via the PIP package.
 You need to create an application on https://apps.twitter.com, this will give you the `Consumer Token`, and the `Consumer Secret`. After that you need to create an access token for that application on the same website, which will give you the `Access Token` and the `Access Secret`. Then you have to manually type these values into indicated places of the .py file along with the Twitter handle you want to target.
 
 That's all.
-
-
-## Known Bugs
-It saves the last tweet of each 200-tweet-batch twice.
-
-
-
-
-
-
-
-
-
-
-
